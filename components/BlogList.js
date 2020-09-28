@@ -82,7 +82,6 @@ const BlogList = ({ posts }) => {
           li {
             opacity: inherit;
             display: flex;
-            justify-content: center;
             flex-direction: column;
             min-height: 38vh;
             margin-bottom: 0;
