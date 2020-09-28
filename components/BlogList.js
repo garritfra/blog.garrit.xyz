@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 const BlogList = ({ posts }) => {
-  console.log(posts);
   const blogElements = posts
     .sort((a, b) => a.frontmatter.date < b.frontmatter.date)
     .map((post) => (

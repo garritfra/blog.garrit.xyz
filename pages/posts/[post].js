@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 export default function BlogTemplate(props) {
   const router = useRouter();
   const { post } = router.query;
-  console.log(props.paths);
   // Render data from `getStaticProps`
   return (
     <Layout siteTitle={props.siteTitle}>
