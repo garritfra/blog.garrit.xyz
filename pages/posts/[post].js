@@ -2,7 +2,6 @@ import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import Layout from "../../components/Layout";
 import glob from "glob";
-import { useRouter } from "next/router";
 
 export default function BlogTemplate(props) {
   function reformatDate(fullDate) {
@@ -163,7 +162,7 @@ export default function BlogTemplate(props) {
 
 export async function getStaticProps({ ...ctx }) {
   const { post } = ctx.params;
-  const content = await import(`../../posts/${post}.md`);
+  const content = await import(`../../content/posts/${post}.md`);
   const data = matter(content.default);
 
   return {
@@ -177,11 +176,11 @@ export async function getStaticProps({ ...ctx }) {
 
 export async function getStaticPaths() {
   //get all .md files in the posts dir
-  const blogs = glob.sync("posts/**/*.md");
+  const blogs = glob.sync("content/posts/**/*.md");
 
   //remove path and extension to leave filename only
   const blogSlugs = blogs.map((file) =>
-    file.split("/")[1].replace(/ /g, "-").slice(0, -3).trim()
+    file.split("/")[2].replace(/ /g, "-").slice(0, -3).trim()
   );
 
   // create paths with `slug` param
