@@ -1,10 +1,15 @@
 import Header from "./Header";
 import Meta from "./Meta";
 
-export default function Layout({ siteTitle, siteDescription, children }) {
+export default function Layout({
+  siteTitle,
+  siteDescription,
+  children,
+  pathname,
+}) {
   return (
-    <section className="layout">
-      <Meta siteTitle={siteTitle} description={siteDescription} />
+    <section className={`layout ${pathname == "info" && "info_page"}`}>
+      <Meta siteTitle={siteTitle} siteDescription={siteDescription} />
       <Header siteTitle={siteTitle} />
       <div className="content">{children}</div>
       <style jsx>
@@ -14,6 +19,9 @@ export default function Layout({ siteTitle, siteDescription, children }) {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+          }
+          .layout .info_page {
+            color: #ebebeb;
           }
           .content {
             flex-grow: 1;
