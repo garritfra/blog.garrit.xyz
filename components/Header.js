@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Profile from "./Profile";
 
 export default function Header(props) {
   return (
@@ -7,6 +8,7 @@ export default function Header(props) {
         <Link href="/">
           <h1>{props.siteTitle}</h1>
         </Link>
+        <Profile></Profile>
       </nav>
       <style jsx>
         {`
