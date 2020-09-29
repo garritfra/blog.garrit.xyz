@@ -1,5 +1,21 @@
+import { useState, useLayoutEffect } from "react";
+
 import Header from "./Header";
 import Meta from "./Meta";
+import Profile from "./Profile";
+
+function useWindowSize() {
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+  return size;
+}
 
 export default function Layout({
   siteTitle,
@@ -7,11 +23,14 @@ export default function Layout({
   children,
   pathname,
 }) {
+  const [windowWidth, windowHeight] = useWindowSize();
+
   return (
-    <section className={`layout ${pathname == "info" && "info_page"}`}>
+    <section className={`layout`}>
       <Meta siteTitle={siteTitle} siteDescription={siteDescription} />
       <Header siteTitle={siteTitle} />
       <div className="content">{children}</div>
+      {windowWidth <= 768 && <Profile className="content"></Profile>}
       <style jsx>
         {`
           .layout {

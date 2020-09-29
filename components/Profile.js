@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-export default function Header(props) {
+export default function Profile(props) {
   return (
-    <header className="header">
+    <div className="profile">
       <img src="/me.jpg"></img>
       <h2>Garrit Franke</h2>
       <p>Random tips, tricks and thoughts about software</p>
@@ -20,8 +20,14 @@ export default function Header(props) {
           Link {
             margin: 1rem;
           }
+
+          @media (max-width: 767px) {
+            .profile {
+              margin: 20px;
+            }
+          }
         `}
       </style>
-    </header>
+    </div>
   );
 }

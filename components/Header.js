@@ -1,14 +1,30 @@
+import { useLayoutEffect, useState } from "react";
 import Link from "next/link";
 import Profile from "./Profile";
 
+function useWindowSize() {
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+  return size;
+}
+
 export default function Header(props) {
+  const [windowWidth, windowHeight] = useWindowSize();
+
   return (
     <header className="header">
       <nav className="nav" role="navigation" aria-label="main navigation">
         <Link href="/">
           <h1>{props.siteTitle}</h1>
         </Link>
-        <Profile></Profile>
+        {windowWidth >= 768 && <Profile></Profile>}
       </nav>
       <style jsx>
         {`
