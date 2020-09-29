@@ -23,7 +23,7 @@ export default function Profile(props) {
 
           @media (max-width: 767px) {
             .profile {
-              margin: 20px;
+              padding: 1.5rem 1.25rem;
             }
           }
         `}
