@@ -1,17 +1,17 @@
 on:
-  push:
-    branches:
-      - master
-  name: Deploy to Github Pages
-  jobs:
+    push:
+        branches:
+        - master
+name: Deploy to Github Pages
+jobs:
     deploy:
-      name: deploy
-      runs-on: ubuntu-latest
-      steps:
+        name: deploy
+        runs-on: ubuntu-latest
+        steps:
         - uses: actions/checkout@master
         - name: Deploy
-          uses: JamesIves/github-pages-deploy-action@master
-          env:
+            uses: JamesIves/github-pages-deploy-action@master
+            env:
             ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
             BRANCH: gh-pages
             FOLDER: out
