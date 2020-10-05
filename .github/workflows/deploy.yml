@@ -1,7 +1,7 @@
 on:
-    push:
-        branches:
-        - master
+  push:
+    branches:
+      - master
   name: Deploy to Github Pages
   jobs:
     deploy:
