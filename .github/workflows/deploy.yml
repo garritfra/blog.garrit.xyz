@@ -12,8 +12,8 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@master
         env:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: out
-        BUILD_SCRIPT: npm ci && npm run build
-        CNAME: slashdev.space
+          ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: out
+          BUILD_SCRIPT: npm install && npm run build
+          CNAME: slashdev.space
