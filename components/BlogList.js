@@ -53,6 +53,13 @@ const BlogList = ({ posts }) => {
             transform: translateX(10px);
             transition: transform 0.5s ease-out;
           }
+          @media (prefers-reduced-motion) {
+            a:hover li .blog__info h2,
+            a:hover li .blog__info h3,
+            a:hover li .blog__info p {
+              transform: translateX(0px);
+            }
+          }
           .hero_image {
             width: 100%;
             height: 33vh;

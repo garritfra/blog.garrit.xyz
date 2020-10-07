@@ -145,6 +145,12 @@ export default function Meta(props) {
             font-size: 0.85rem;
             line-height: 1.45rem;
           }
+          @media (prefers-reduced-motion) {
+            * {
+              transition: none !important;
+            }
+          }
+
            {
             /* //TYPOGRAPHY------------------------------------- */
           }
