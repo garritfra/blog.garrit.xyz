@@ -7,7 +7,7 @@ function reformatDate(fullDate) {
 }
 
 function truncateSummary(content) {
-  return content.slice(0, 200).trimEnd();
+  return content.slice(0, 200).trimEnd() + "...";
 }
 
 const BlogList = ({ posts }) => {
