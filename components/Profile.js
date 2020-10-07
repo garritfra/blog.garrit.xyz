@@ -12,7 +12,7 @@ export default function Profile(props) {
       <br />
       <Link href="https://www.linkedin.com/in/garritfranke/">LinkedIn</Link>
       <br />
-      <Link href="/rss.xml">Rss</Link>
+      <Link href="/rss.xml">RSS</Link>
       <style jsx>
         {`
           img {
