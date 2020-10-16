@@ -30,6 +30,15 @@ export default function BlogTemplate(props) {
         <div className="blog__footer">
           <h2>Written By: Garrit Franke</h2>
         </div>
+        <script
+          src="https://utteranc.es/client.js"
+          repo="garritfra/slashdev.space"
+          issue-term="pathname"
+          label="comments"
+          theme="github-light"
+          crossorigin="anonymous"
+          async
+        ></script>
       </article>
       <style jsx>
         {`
