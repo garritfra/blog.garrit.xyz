@@ -11,6 +11,7 @@ export default function Meta(props) {
           name="Description"
           content="Random tips, tricks and thoughts about software"
         ></meta>
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
       </Head>
       <style jsx global>
         {`
