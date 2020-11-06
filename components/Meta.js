@@ -226,6 +226,12 @@ export default function Meta(props) {
               line-height: 1.4375;
             }
           }
+
+          // FIXME: I could not get this to work inside the post component,
+          // but here it apparently works. Maybe an overriding selector?
+          .blog__body a {
+            text-decoration: underline;
+          }
         `}
       </style>
     </>
