@@ -3,7 +3,7 @@ title: Booleans are wasted memory
 date: "2020-11-17"
 ---
 
-A boolean is either `true` or `false`. That translates to 1 or 0. If you think that one bit is enough to store this information, you'd be wrong.
+A boolean is either `true` or `false`. That translates to `1` or `0`. If you think that one bit is enough to store this information, you'd be wrong.
 
 In order to keep the binary layout of a program simple and convenient, most languages store information in either 4 bit or 8 bit blocks. If you allocate a `bool` in C, you will get [an integer constant with a value of either 1 or 0](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/stdbool.h.html), taking up 4 bits.
 If you allocate a bool in Rust or (most) other languages that are based on LLVM, [it will take up 1 `i1`, or 8 bit of memory](https://llvm.org/docs/LangRef.html#simple-constants).

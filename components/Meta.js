@@ -146,8 +146,11 @@ export default function Meta(props) {
             margin-bottom: calc(1.45rem / 2);
           }
           code {
-            font-size: 0.85rem;
             line-height: 1.45rem;
+          }
+          p code {
+            background: hsla(0, 0%, 0%, 0.1);
+            padding: 0 0.4rem;
           }
           @media (prefers-reduced-motion) {
             * {
