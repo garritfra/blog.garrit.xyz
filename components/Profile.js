@@ -6,6 +6,8 @@ export default function Profile(props) {
       <img src="/me.jpg"></img>
       <h2>Garrit Franke</h2>
       <p>Random tips, tricks and thoughts about software</p>
+      <Link href="https://lists.sr.ht/~garritfra/public-inbox">Public Inbox</Link>
+      <br />
       <Link href="https://garrit.xyz">Website</Link>
       <br />
       <Link href="https://github.com/garritfra">Github</Link>

@@ -229,7 +229,8 @@ export default function Meta(props) {
 
           // FIXME: I could not get this to work inside the post component,
           // but here it apparently works. Maybe an overriding selector?
-          .blog__body a {
+          .blog__body a,
+          .blog__footer a {
             text-decoration: underline;
           }
         `}

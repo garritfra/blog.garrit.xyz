@@ -26,6 +26,7 @@ export default function BlogTemplate(props) {
         </div>
         <div className="blog__body">
           <ReactMarkdown source={props.markdownBody} />
+          <p>Comments? Drop a mail in my <a href="https://lists.sr.ht/~garritfra/public-inbox">public inbox.</a></p>
         </div>
         <div className="blog__footer">
           <h2>Written By: Garrit Franke</h2>
