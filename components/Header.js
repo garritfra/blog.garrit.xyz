@@ -22,7 +22,9 @@ export default function Header(props) {
     <header className="header">
       <nav className="nav" role="navigation" aria-label="main navigation">
         <Link href="/">
-          <h1>{props.siteTitle}</h1>
+          <a>
+            <h1>{props.siteTitle}</h1>
+          </a>
         </Link>
         {windowWidth >= 768 && <Profile></Profile>}
       </nav>
