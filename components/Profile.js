@@ -3,7 +3,6 @@ import Link from "next/link";
 export default function Profile(props) {
   return (
     <div className="profile">
-      <img src="/me.jpg"></img>
       <h2>Garrit Franke</h2>
       <p>Random tips, tricks and thoughts about software</p>
       <Link href="https://lists.sr.ht/~garritfra/public-inbox">

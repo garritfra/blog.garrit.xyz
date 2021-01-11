@@ -121,6 +121,11 @@ export default function BlogTemplate(props) {
           .blog__footer a svg {
             width: 20px;
           }
+          @media (max-width: 768px) {
+            .blog__footer {
+              display: none;
+            }
+          }
           @media (min-width: 768px) {
             .blog {
               display: flex;
