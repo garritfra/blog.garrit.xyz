@@ -27,7 +27,7 @@ export default function BlogTemplate(props) {
         <div className="blog__body">
           <ReactMarkdown source={props.markdownBody} />
           <p>
-            Enjoyed this post? Consider{" "}
+            If you enjoyed this post, consider{" "}
             <a href="https://donate.slashdev.space">buying me a coffee</a>! Got
             comments? Drop a mail in my{" "}
             <a href="https://lists.sr.ht/~garritfra/public-inbox">
