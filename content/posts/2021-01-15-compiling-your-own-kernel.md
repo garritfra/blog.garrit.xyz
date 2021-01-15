@@ -1,5 +1,5 @@
 ---
-title: Compiling my own kernel
+title: Compiling your own kernel
 date: "2021-01-15"
 draft: false
 ---
