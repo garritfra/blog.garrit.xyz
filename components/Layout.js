@@ -28,7 +28,7 @@ export default function Layout({
   return (
     <section className={`layout`}>
       <Meta siteTitle={siteTitle} siteDescription={siteDescription} />
-      <Header siteTitle={siteTitle} />
+      <Header siteTitle="/dev.space" />
       <div className="content">{children}</div>
       {windowWidth <= 768 && <Profile className="content"></Profile>}
       <style jsx>
