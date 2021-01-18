@@ -18,7 +18,7 @@ export default function BlogTemplate(props) {
   if (!props.frontmatter) return <></>;
 
   return (
-    <Layout siteTitle={props.siteTitle}>
+    <Layout siteTitle={props.frontmatter.title}>
       <article className="blog">
         <div className="blog__info">
           <h1>{props.frontmatter.title}</h1>
