@@ -58,4 +58,6 @@ Whether you're into Gaming, Painting, or Spanish dancing music, there is an inst
 
 I myself am a person who cares a lot about free and open source software, therefore my choice of instance was [fosstodon.org](https://fosstodon.org/), a mastodon instance geared towards awesome like-minded people.
 
+**Note**: This post has generated some interesting discussions on [Hacker News](https://news.ycombinator.com/item?id=25820646#25820999).
+
 This is post 005 of [#100DaysToOffload](https://100daystooffload.com/).
