@@ -4,7 +4,7 @@ export default function Profile(props) {
   return (
     <div className="profile">
       <h2>Garrit Franke</h2>
-      <p>Random tips, tricks and thoughts about software</p>
+      <p>Random thoughts, tips and rants about software</p>
       <Link href="https://lists.sr.ht/~garritfra/public-inbox">
         Public Inbox
       </Link>
