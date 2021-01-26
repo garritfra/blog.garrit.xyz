@@ -1,5 +1,5 @@
 ---
-title: Macros in Vim
+title: Using Macros in Vim
 date: "2021-01-26"
 ---
 
