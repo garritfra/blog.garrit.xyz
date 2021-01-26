@@ -3,7 +3,7 @@ title: Using Macros in Vim
 date: "2021-01-26"
 ---
 
-For a long time, macros in Vim were a huge mystery for me. I knew they existed, but I didn't know how or why you'd use them. A recent task of mine involved replacing the unsafe operator (`!!`) in a large kotlin codebase with a null-safe operator (`?`). This is a snippet I encountered numerous times:
+For a long time, macros in Vim were a huge mystery for me. I knew they existed, but I didn't know how or why you'd use them. A recent task of mine involved replacing the unsafe operator (`!!`) in a large kotlin codebase with a null-safe operator (`?`). This game me a good opportunity to learn about macros. This is a snippet I encountered numerous times:
 
 ```kt
 mLeftButton!!.text = "Left"
