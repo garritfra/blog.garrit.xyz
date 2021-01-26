@@ -1,7 +1,6 @@
 ---
 title: Are humans still evolving?
 date: "2021-01-11"
-draft: false
 ---
 
 This is by no means a scientifically accurate article. These are my thoughts, and I'd be happy to discuss this topic. Take it with a grain of salt.

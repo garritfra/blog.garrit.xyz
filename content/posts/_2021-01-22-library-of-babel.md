@@ -1,7 +1,6 @@
 ---
 title: The library of babel
 date: "2021-01-22"
-draft: true
 ---
 
 What if I told you that everything you ever have said, thought and wrote, and everything you will say, think or write, has already been written down? Let me share my discovery of a construct called the _library of babel_.

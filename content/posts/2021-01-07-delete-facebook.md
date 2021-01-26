@@ -1,7 +1,6 @@
 ---
 title: I closed my Facebook account, and you should too
 date: "2021-01-07"
-draft: false
 ---
 
 I know I should have done this a while ago, but with ever-increasing scandals about data privacy surrounding Facebook, I finally decided to get rid of it.

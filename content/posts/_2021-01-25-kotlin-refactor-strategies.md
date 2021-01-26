@@ -1,7 +1,6 @@
 ---
 title: Fixing nullability issues when migrating to Kotlin
 date: "2021-01-23"
-draft: true
 ---
 
 The last couple of days, I had the opportunity to refactor some of the Kotlin code in our massive android project. The app is quite old, and a lot of legacy code has accumulated over the years. At one point, we decided to migrate a lot of our view-logic from Java to Kotlin. Instead of cleaning the code up, this lead to an even bigger buildup of technical debt. The problem was that we mainly used the migration-tools that Android Studio provides, which, at that time where not very sophisticated. Sometimes we had to manually fix some things which, since it is such a massive codebase, we didn't really take the time to clean every converted file up.
