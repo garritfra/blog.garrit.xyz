@@ -11,7 +11,6 @@ function truncateSummary(content) {
 }
 
 const BlogList = ({ posts }) => {
-  console.log(posts);
   return (
     <>
       <ul className="list">
