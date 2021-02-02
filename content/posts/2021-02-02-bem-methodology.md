@@ -27,7 +27,7 @@ A part of a block that has no standalone meaning and is semantically tied to its
 
 A flag on a block or an element. Used to change appearance or behavior. This might be **disabled, checked, fixed, big**, etc.
 
-Putting it together
+# Putting it together
 
 A block itself is referenced though its name.
 
