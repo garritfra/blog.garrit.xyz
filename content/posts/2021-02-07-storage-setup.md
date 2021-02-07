@@ -1,5 +1,5 @@
 ---
-title: My storage setup (Febuary 2021)
+title: My storage setup (Feburary 2021)
 date: "2021-02-07"
 ---
 
