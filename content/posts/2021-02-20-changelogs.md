@@ -33,7 +33,6 @@ This is just an example that illustrates how **I** decided to note down my chang
 Here's an example of how a changelog could look like. It's taken from [Sabre](https://github.com/garritfra/sabre), a project I'm currently working on. The full changelog can be found [here](https://github.com/garritfra/sabre/blob/master/CHANGELOG.md).
 
 ```md
-
 # Changelog
 
 ## v0.4.0 (2021-02-20)
@@ -80,7 +79,7 @@ This release adds type inference to Sabre. There are also a lot of improvements 
 
 ## Personal recommendations
 
-When releasing a new version, don't just add an entry to your changelog. You should use **git tags** whenever working with versions, to mark the exact commit of the released version. 
+When releasing a new version, don't just add an entry to your changelog. You should use **git tags** whenever working with versions, to mark the exact commit of the released version.
 
 Read up on **semantic versioning**! This is the most common convention when it comes to versioning your software. ([here](https://www.geeksforgeeks.org/introduction-semantic-versioning/) is a simple guide, [here](https://semver.org/) is the official specification).
 
@@ -89,11 +88,11 @@ I'd also advise you to keep a log of your commits in the description of the tag.
 ```
 git tag -a <new release> -m "$(git shortlog <last release>..HEAD)"
 ```
+
 So, if you're releasing version `v0.2.0` after `v0.1.5`, you would run this command to tag your current commit with a good commit history:
 
 ```
 git tag -a v0.2.0 -m "$(git shortlog v0.1.5..HEAD)"
 ```
-
 
 This is post 013 of [#100DaysToOffload](https://100daystooffload.com/).
