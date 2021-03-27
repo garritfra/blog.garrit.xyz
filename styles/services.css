@@ -18,7 +18,8 @@
         "matrix-heading      git-heading      boards-heading"
         "matrix-description  git-description  boards-description"
         "matrix-button       git-button       boards-button";
-    width: 100vw;
+    width: 80vw;
+    padding: 0 10vw;
 }
 
 .services__offers__card__heading {
@@ -28,6 +29,7 @@
 
 .services__offers__card__description {
     margin-bottom: 1rem;
+    margin: 0 3rem;
 }
 
 .services__offers_card__button {
@@ -37,6 +39,7 @@
     color: white;
     text-decoration: none;
     padding: 0.6rem 2rem;
+    margin: 2rem 2.5rem;
     transition: 0.2s;
 }
 
