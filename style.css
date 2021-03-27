@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap");
+
+body {
+    margin: 0;
+}
+
+.hero {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    font-family: "Work Sans", sans-serif;
+}
+
+.hero__text-area__container {
+    text-align: center;
+}
+
+.hero__text-area__heading {
+    font-size: 10rem;
+    margin: 1rem;
+}
+
+.hero__text-area__subheading {
+    font-size: 3rem;
+}
+
+.hero__scroll-arrow {
+    font-size: 6rem;
+    font-weight: lighter;
+    position: absolute;
+    bottom: 1rem;
+}
