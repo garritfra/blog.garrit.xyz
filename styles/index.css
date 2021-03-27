@@ -3,6 +3,7 @@
 
 /* Components */
 @import url("./hero.css");
+@import url("./introduction.css");
 
 body {
     margin: 0;
