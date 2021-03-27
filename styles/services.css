@@ -85,3 +85,38 @@
         width: 9rem;
     }
 }
+
+/* At smaller than 520px the fonts get too large to fit in one line */
+@media only screen and (max-width: 520px) {
+    .services__heading {
+        font-size: 3.8rem;
+    }
+    .services__offers__card__heading {
+        font-size: 2.5rem;
+    }
+    .services__offers__card__description {
+        font-size: 1.1rem;
+    }
+}
+/* At smaller than 380px the fonts get too large again to fit in one line */
+@media only screen and (max-width: 380px) {
+    .welcome__text-area__description {
+        font-size: 1.7rem;
+    }
+    .services__heading {
+        font-size: 4rem;
+    }
+    .services__offers__card__heading {
+        font-size: 2.8rem;
+    }
+    .services__offers__card__description {
+        font-size: 1.3rem;
+    } 
+    .services__offers_card__button {
+        width: 14rem;
+        font-size: 1.3rem;
+    }
+    .services__offers__card__description {
+        width: 13rem;
+    } 
+}

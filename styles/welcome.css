@@ -35,3 +35,16 @@
 	margin-left: 12vw;
 	margin-right: 12vw;
 }
+
+/* At smaller than 520px the fonts get too large to fit in one line */
+@media only screen and (max-width: 520px) {
+    :root {
+        font-size: .8em;
+    }
+}
+/* At smaller than 380px the fonts get too large again to fit in one line */
+@media only screen and (max-width: 380px) {
+    :root {
+        font-size: .6em;
+    }
+}
