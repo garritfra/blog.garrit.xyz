@@ -11,12 +11,23 @@
 }
 
 .hero__text-area__heading {
-    font-size: 10rem;
+    font-size: 4rem;
     margin: 1rem;
 }
 
+
 .hero__text-area__subheading {
-    font-size: 3rem;
+    font-size: 2rem;
+}
+
+@media (min-width: 800px) {
+    .hero__text-area__heading {
+        font-size: 10rem;
+    }
+
+    .hero__text-area__subheading {
+        font-size: 3rem;
+    }
 }
 
 .hero__scroll-arrow {
