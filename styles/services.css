@@ -3,13 +3,12 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 2rem;
 }
 
 .services__heading {
     font-size: 3.3rem;
     font-weight: 350;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .services__offers {
