@@ -13,15 +13,14 @@
 }
 
 .services__offers {
-    display: flex;
+    display: grid;
+    grid-template-areas: 
+        "matrix-heading      git-heading      boards-heading"
+        "matrix-description  git-description  boards-description"
+        "matrix-button       git-button       boards-button";
     width: 100vw;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
 }
 
-.services__offers__card {
-    width: 15rem;
-}
 .services__offers__card__heading {
     font-weight: 350;
     font-size: 2rem;
@@ -46,3 +45,15 @@
     color: black;
     background: white;
 }
+
+.matrix-heading {grid-area: matrix-heading;}
+.matrix-description {grid-area: matrix-description;}
+.matrix-button {grid-area: matrix-button;}
+
+.git-heading {grid-area: git-heading;}
+.git-description {grid-area: git-description;}
+.git-button {grid-area: git-button;}
+
+.boards-heading {grid-area: boards-heading;}
+.boards-description {grid-area: boards-description;}
+.boards-button {grid-area: boards-button;}
