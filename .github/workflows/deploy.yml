@@ -16,4 +16,4 @@ jobs:
           BRANCH: gh-pages
           FOLDER: out
           BUILD_SCRIPT: npm ci && npm run build && touch out/.nojekyll
-          CNAME: slashdev.space
+          CNAME: blog.garrit.xyz
