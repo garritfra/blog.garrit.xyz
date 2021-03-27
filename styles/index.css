@@ -4,6 +4,7 @@
 /* Components */
 @import url("./hero.css");
 @import url("./introduction.css");
+@import url("./welcome.css");
 @import url("./services.css");
 
 body {
