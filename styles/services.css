@@ -1,0 +1,45 @@
+.services {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10rem;
+}
+
+.services__heading {
+    font-size: 5rem;
+}
+
+.services__offers {
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.services__offers__card {
+    margin-top: 1.5rem;
+    width: 15rem;
+}
+.services__offers__card__heading {
+    font-size: 2rem;
+}
+
+.services__offers__card__description {
+    margin-bottom: 1rem;
+}
+
+.services__offers_card__button {
+    background: black;
+    border: 0px;
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 2rem;
+    transition: 0.2s;
+}
+
+.services__offers_card__button:hover {
+    border: 1px solid black;
+    color: black;
+    background: white;
+}

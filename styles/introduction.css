@@ -1,15 +1,13 @@
 .introduction {
     align-items: center;
     display: flex;
-    font-family: "Work Sans", sans-serif;
-    height: 30vh;
     justify-content: center;
     text-align: center;
+    margin-bottom: 10rem;
 }
 
 .introduction__container__heading {
     font-size: 2.5rem;
-
 }
 
 .introduction__container__subheading {

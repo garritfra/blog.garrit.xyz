@@ -4,7 +4,9 @@
 /* Components */
 @import url("./hero.css");
 @import url("./introduction.css");
+@import url("./services.css");
 
 body {
     margin: 0;
+    font-family: "Work Sans", sans-serif;
 }
