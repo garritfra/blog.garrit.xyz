@@ -2,8 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap");
 
 /* Components */
-@import url("./hero.css");
-@import url("./introduction.css");
 @import url("./welcome.css");
 @import url("./services.css");
 
