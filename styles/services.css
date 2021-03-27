@@ -59,3 +59,29 @@
 .boards-heading {grid-area: boards-heading;}
 .boards-description {grid-area: boards-description;}
 .boards-button {grid-area: boards-button;}
+
+/* The "Join here!" button wraps at 857px, so this is the breakpoint. */
+@media only screen and (max-width: 858px) {
+    .services__offers {
+        grid-template-areas: 
+            "matrix-heading"
+            "matrix-description"
+            "matrix-button"
+            "git-heading"
+            "git-description"
+            "git-button"
+            "boards-heading"
+            "boards-description"
+            "boards-button";
+    }
+
+    .services__offers_card__button {
+        margin: 2rem auto;
+        width: 11em;
+    }
+
+    .services__offers__card__description {
+        margin: 0 auto;
+        width: 9rem;
+    }
+}
