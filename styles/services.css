@@ -8,7 +8,7 @@
 
 .services__heading {
     font-size: 3.3rem;
-    font-weight: bold;
+    font-weight: 350;
     margin-bottom: 1rem;
 }
 
@@ -23,6 +23,7 @@
     width: 15rem;
 }
 .services__offers__card__heading {
+    font-weight: 350;
     font-size: 2rem;
 }
 
@@ -31,6 +32,7 @@
 }
 
 .services__offers_card__button {
+    font-weight: 350;
     background: black;
     border: 0px;
     color: white;
