@@ -1,3 +1,7 @@
+/* Components */
+@import url("./welcome.css");
+@import url("./services.css");
+
 /* Fonts */
 @font-face {
     font-family: "Work Sans";
@@ -9,11 +13,6 @@
     src: url("../fonts/work-sans/WorkSans-Italic-VariableFont_wght.ttf");
     font-style: italic;
 }
-
-/* Components */
-@import url("./welcome.css");
-@import url("./services.css");
-
 
 body {
     margin: 0;
