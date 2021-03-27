@@ -1,0 +1,32 @@
+.welcome {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: "Work Sans", sans-serif;
+}
+
+.welcome__container {
+	margin-top: 8vh;
+    text-align: center;
+}
+
+.welcome__text-area__heading {
+    font-size: 5rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.welcome__text-area__subheading {
+    font-size: 2rem;
+    text-align: center;
+	margin-top: 0;
+	margin-bottom: 2em;
+}
+
+.welcome__text-area__description {
+    font-size: 1.5rem;
+	/* font-weight: 350; */ /* Can't try out, I don't have multiple weights installed. */
+    text-align: center;
+	margin-left: 12vw;
+	margin-right: 12vw;
+}
