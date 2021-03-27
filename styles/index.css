@@ -1,9 +1,19 @@
 /* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap");
+@font-face {
+    font-family: "Work Sans";
+    src: url("../fonts/work-sans/WorkSans-VariableFont_wght.ttf");
+    font-style: normal;
+}
+@font-face {
+    font-family: "Work Sans";
+    src: url("../fonts/work-sans/WorkSans-Italic-VariableFont_wght.ttf");
+    font-style: italic;
+}
 
 /* Components */
 @import url("./welcome.css");
 @import url("./services.css");
+
 
 body {
     margin: 0;
