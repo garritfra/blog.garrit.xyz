@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>/dev.space</title>
         <link rel="stylesheet" href="styles/index.css" />
+        <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
     </head>
     <body>
         <section class="welcome">
@@ -14,7 +15,7 @@
                     /dev.space
                 </h1>
                 <h3 class="welcome__text-area__subheading">
-                    Where developers can collectively learn an grow.
+                    Where developers can collectively learn and grow.
                 </h3>
                 <p class="welcome__text-area__description">
                     Whether you're freshly starting out, or you are just looking
@@ -27,45 +28,41 @@
             <div class="services__container">
                 <h1 class="services__heading">What you get</h1>
                 <div class="services__offers">
-                    <div class="services__offers__card">
-                        <h1 class="services__offers__card__heading">Chat</h1>
-                        <p class="services__offers__card__description">
-                            We're hosting our own Matrix server to keep in touch
-                            and share ideas.
-                        </p>
-                        <a
-                            href="https://matrix.slashdev.space"
-                            class="services__offers_card__button"
-                        >
-                            Join here!
-                        </a>
-                    </div>
-                    <div class="services__offers__card">
-                        <h1 class="services__offers__card__heading">
-                            Code Hosting
-                        </h1>
-                        <p class="services__offers__card__description">
-                            We use Gitea to collaboratively work on our code.
-                        </p>
-                        <a
-                            href="https://git.slashdev.space"
-                            class="services__offers_card__button"
-                        >
-                            Set up your account!
-                        </a>
-                    </div>
-                    <div class="services__offers__card">
-                        <h1 class="services__offers__card__heading">Boards</h1>
-                        <p class="services__offers__card__description">
-                            We provide free Kanban boards to plan your projects.
-                        </p>
-                        <a
-                            href="https://boards.slashdev.space"
-                            class="services__offers_card__button"
-                        >
-                            Get agile!
-                        </a>
-                    </div>
+                    <h1 class="services__offers__card__heading matrix-heading">Chat</h1>
+                    <p class="services__offers__card__description matrix-description">
+                        We're hosting our own Matrix server to keep in touch
+                        and share ideas.
+                    </p>
+                    <a
+                        href="https://matrix.slashdev.space"
+                        class="services__offers_card__button matrix-button"
+                    >
+                        <p>Join here!</p>
+                    </a>
+
+                    <h1 class="services__offers__card__heading git-heading">
+                        Code Hosting
+                    </h1>
+                    <p class="services__offers__card__description git-description">
+                        We use Gitea to collaboratively work on our code.
+                    </p>
+                    <a
+                        href="https://git.slashdev.space"
+                        class="services__offers_card__button git-button"
+                    >
+                        <p>Set up your account!</p>
+                    </a>
+
+                    <h1 class="services__offers__card__heading boards-heading">Boards</h1>
+                    <p class="services__offers__card__description boards-description">
+                        We provide free Kanban boards to plan your projects.
+                    </p>
+                    <a
+                        href="https://boards.slashdev.space"
+                        class="services__offers_card__button boards-button"
+                    >
+                        <p>Get agile!</p>
+                    </a>
                 </div>
             </div>
         </section>

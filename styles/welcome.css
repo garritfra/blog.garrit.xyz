@@ -23,6 +23,9 @@
     text-align: center;
 	margin-top: 0;
 	margin-bottom: 2em;
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .welcome__text-area__description {
@@ -31,4 +34,17 @@
     text-align: center;
 	margin-left: 12vw;
 	margin-right: 12vw;
+}
+
+/* At smaller than 520px the fonts get too large to fit in one line */
+@media only screen and (max-width: 520px) {
+    :root {
+        font-size: .8em;
+    }
+}
+/* At smaller than 380px the fonts get too large again to fit in one line */
+@media only screen and (max-width: 380px) {
+    :root {
+        font-size: .6em;
+    }
 }

@@ -3,25 +3,24 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 2rem;
 }
 
 .services__heading {
     font-size: 3.3rem;
     font-weight: 350;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .services__offers {
-    display: flex;
-    width: 100vw;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-areas: 
+        "matrix-heading      git-heading      boards-heading"
+        "matrix-description  git-description  boards-description"
+        "matrix-button       git-button       boards-button";
+    width: 80vw;
+    padding: 0 10vw;
 }
 
-.services__offers__card {
-    width: 15rem;
-}
 .services__offers__card__heading {
     font-weight: 350;
     font-size: 2rem;
@@ -29,20 +28,101 @@
 
 .services__offers__card__description {
     margin-bottom: 1rem;
+    margin: 0 3rem;
 }
 
 .services__offers_card__button {
     font-weight: 350;
     background: black;
-    border: 0px;
+    border: 1px solid black;
     color: white;
     text-decoration: none;
     padding: 0.6rem 2rem;
+    margin: 2rem 2.5rem;
     transition: 0.2s;
+
+    display: flex;
+    align-items: center;
+}
+
+.services__offers_card__button > p {
+    margin: auto;
 }
 
 .services__offers_card__button:hover {
-    border: 1px solid black;
     color: black;
     background: white;
+}
+
+.matrix-heading {grid-area: matrix-heading;}
+.matrix-description {grid-area: matrix-description;}
+.matrix-button {grid-area: matrix-button;}
+
+.git-heading {grid-area: git-heading;}
+.git-description {grid-area: git-description;}
+.git-button {grid-area: git-button;}
+
+.boards-heading {grid-area: boards-heading;}
+.boards-description {grid-area: boards-description;}
+.boards-button {grid-area: boards-button;}
+
+/* The "Join here!" button wraps at 857px, so this is the breakpoint. */
+@media only screen and (max-width: 858px) {
+    .services__offers {
+        grid-template-areas: 
+            "matrix-heading"
+            "matrix-description"
+            "matrix-button"
+            "git-heading"
+            "git-description"
+            "git-button"
+            "boards-heading"
+            "boards-description"
+            "boards-button";
+    }
+
+    .services__offers_card__button {
+        margin: 2rem auto;
+        width: 11em;
+    }
+
+    .services__offers__card__description {
+        margin: 0 auto;
+        width: 9rem;
+    }
+}
+
+/* At smaller than 520px the fonts get too large to fit in one line */
+@media only screen and (max-width: 520px) {
+    .services__heading {
+        font-size: 3.8rem;
+    }
+    .services__offers__card__heading {
+        font-size: 2.5rem;
+    }
+    .services__offers__card__description {
+        font-size: 1.1rem;
+    }
+}
+/* At smaller than 380px the fonts get too large again to fit in one line */
+@media only screen and (max-width: 380px) {
+    .welcome__text-area__description {
+        font-size: 1.7rem;
+    }
+    .services__heading {
+        font-size: 4rem;
+    }
+    .services__offers__card__heading {
+        font-size: 2.8rem;
+    }
+    .services__offers__card__description {
+        font-size: 1.3rem;
+    } 
+    .services__offers_card__button {
+        width: 14rem;
+        font-size: 1.3rem;
+    }
+    .services__offers__card__description {
+        width: 13rem;
+    } 
 }
