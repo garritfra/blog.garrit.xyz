@@ -34,16 +34,22 @@
 .services__offers_card__button {
     font-weight: 350;
     background: black;
-    border: 0px;
+    border: 1px solid black;
     color: white;
     text-decoration: none;
     padding: 0.6rem 2rem;
     margin: 2rem 2.5rem;
     transition: 0.2s;
+
+    display: flex;
+    align-items: center;
+}
+
+.services__offers_card__button > p {
+    margin: auto;
 }
 
 .services__offers_card__button:hover {
-    border: 1px solid black;
     color: black;
     background: white;
 }
