@@ -12,13 +12,16 @@
 }
 
 .services__offers {
-    display: grid;
-    grid-template-areas: 
-        "matrix-heading      git-heading      boards-heading"
-        "matrix-description  git-description  boards-description"
-        "matrix-button       git-button       boards-button";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     width: 80vw;
     padding: 0 10vw;
+}
+
+.services__offers__card {
+    height: 15rem;
+    width: 20rem;
 }
 
 .services__offers__card__heading {
@@ -29,6 +32,7 @@
 .services__offers__card__description {
     margin-bottom: 1rem;
     margin: 0 3rem;
+    height: 3rem;
 }
 
 .services__offers_card__button {
@@ -54,75 +58,13 @@
     background: white;
 }
 
-.matrix-heading {grid-area: matrix-heading;}
-.matrix-description {grid-area: matrix-description;}
-.matrix-button {grid-area: matrix-button;}
-
-.git-heading {grid-area: git-heading;}
-.git-description {grid-area: git-description;}
-.git-button {grid-area: git-button;}
-
-.boards-heading {grid-area: boards-heading;}
-.boards-description {grid-area: boards-description;}
-.boards-button {grid-area: boards-button;}
-
-/* The "Join here!" button wraps at 857px, so this is the breakpoint. */
-@media only screen and (max-width: 858px) {
-    .services__offers {
-        grid-template-areas: 
-            "matrix-heading"
-            "matrix-description"
-            "matrix-button"
-            "git-heading"
-            "git-description"
-            "git-button"
-            "boards-heading"
-            "boards-description"
-            "boards-button";
-    }
-
-    .services__offers_card__button {
-        margin: 2rem auto;
-        width: 11em;
-    }
-
-    .services__offers__card__description {
-        margin: 0 auto;
-        width: 9rem;
-    }
-}
-
-/* At smaller than 520px the fonts get too large to fit in one line */
-@media only screen and (max-width: 520px) {
-    .services__heading {
-        font-size: 3.8rem;
-    }
-    .services__offers__card__heading {
-        font-size: 2.5rem;
-    }
-    .services__offers__card__description {
-        font-size: 1.1rem;
-    }
-}
-/* At smaller than 380px the fonts get too large again to fit in one line */
 @media only screen and (max-width: 380px) {
-    .welcome__text-area__description {
-        font-size: 1.7rem;
+    .services__offers {
+        width: 100vw;
+        padding: 0;
     }
-    .services__heading {
-        font-size: 4rem;
+
+    .services__offers__card {
+        width: 25rem;
     }
-    .services__offers__card__heading {
-        font-size: 2.8rem;
-    }
-    .services__offers__card__description {
-        font-size: 1.3rem;
-    } 
-    .services__offers_card__button {
-        width: 14rem;
-        font-size: 1.3rem;
-    }
-    .services__offers__card__description {
-        width: 13rem;
-    } 
 }
