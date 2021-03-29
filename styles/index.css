@@ -1,3 +1,5 @@
+@import url("./typography.css");
+
 /* Components */
 @import url("./welcome.css");
 @import url("./services.css");
@@ -18,4 +20,5 @@ body {
     margin: 0;
     font-family: "Work Sans", sans-serif;
     font-weight: 250;
+    text-align: center;
 }
