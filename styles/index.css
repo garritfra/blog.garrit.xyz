@@ -1,8 +1,11 @@
 @import url("./typography.css");
+@import url("./atoms.css");
+
 
 /* Components */
 @import url("./welcome.css");
 @import url("./services.css");
+@import url("./contact.css");
 
 /* Fonts */
 @font-face {

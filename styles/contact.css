@@ -1,0 +1,10 @@
+.contact__container {
+    margin: auto 12vw;
+    justify-content: center;
+}
+
+.button__contact {
+    margin: auto;
+    margin-bottom: 2rem;
+    width: 15rem;
+}

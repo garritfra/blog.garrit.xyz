@@ -33,30 +33,6 @@
     font-size: 1rem;
 }
 
-.services__offers_card__button {
-    font-weight: 350;
-    background: black;
-    border: 1px solid black;
-    color: white;
-    text-decoration: none;
-    padding: 0.6rem 2rem;
-    margin: 2rem 2.5rem;
-    transition: 0.2s;
-
-    display: flex;
-    align-items: center;
-}
-
-.services__offers_card__button > p {
-    font-size: 1rem;
-    margin: auto;
-}
-
-.services__offers_card__button:hover {
-    color: black;
-    background: white;
-}
-
 @media only screen and (max-width: 380px) {
     .services__offers {
         width: 100vw;
