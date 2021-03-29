@@ -6,6 +6,8 @@
 @import url("./welcome.css");
 @import url("./services.css");
 @import url("./contact.css");
+@import url("./support.css");
+
 
 /* Fonts */
 @font-face {
@@ -24,4 +26,8 @@ body {
     font-family: "Work Sans", sans-serif;
     font-weight: 250;
     text-align: center;
+}
+
+footer {
+    margin-bottom: 2rem;
 }

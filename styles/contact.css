@@ -1,5 +1,6 @@
 .contact__container {
-    margin: auto 12vw;
+    width: 80vw;
+    margin: auto;
     justify-content: center;
 }
 
