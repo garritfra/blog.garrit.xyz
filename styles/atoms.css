@@ -21,3 +21,9 @@
     color: black;
     background: white;
 }
+
+@media only screen and (max-width: 520px) {
+    .button__link p {
+        font-size: 1.3rem;
+    }
+}

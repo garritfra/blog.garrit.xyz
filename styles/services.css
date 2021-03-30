@@ -33,6 +33,16 @@
     font-size: 1rem;
 }
 
+@media only screen and (max-width: 520px) {
+    .services__offers__card {
+        margin-bottom: 3rem;
+    }
+    .services__offers__card__description {
+        font-size: 1.3rem;
+        height: auto;
+    }
+}
+
 @media only screen and (max-width: 380px) {
     .services__offers {
         width: 100vw;
@@ -41,5 +51,11 @@
 
     .services__offers__card {
         width: 25rem;
+        margin-bottom: 3rem;
+    }
+
+    .services__offers__card__description {
+        font-size: 1.3rem;
+        height: auto;
     }
 }
