@@ -3,3 +3,14 @@
     margin: auto;
     justify-content: center
 }
+
+.support-us__donations__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.support-us__donations__button {
+    margin: 1rem;
+}

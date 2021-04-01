@@ -27,3 +27,10 @@
         font-size: 1.3rem;
     }
 }
+
+/* Description */
+
+.description {
+    margin-right: 12vw;
+    margin-left: 12vw;
+}
