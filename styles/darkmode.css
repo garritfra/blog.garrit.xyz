@@ -1,0 +1,15 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        background-color: #161618;
+        color: #dbd7db;
+    }
+
+    .button__link {
+        background-color: #dbd7db;
+        color: #161618;
+    }
+
+    a {
+       color: #dbd7db;
+    }
+}
