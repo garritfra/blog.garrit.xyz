@@ -23,12 +23,12 @@ Your keypair can also come in handy as a SSH key. Before I knew about PGP, I alw
 
 Let's first go over the process of setting up a keypair. For this, we will need the `gpg` command installed on our system. Usually, this is just a `<package manager> install gpg` away. Then, we will have to generate a keypair. The quickest way to get one is to use `gpg --gen-key`, but that will make some quirky assumptions about how you want to use your key.
 
-In PGP, there is this concept of a __keyring__. A keyring has one master key and many subkeys. It is generally a good idea to have one fat master key that never expires and many small subkeys that last about a year or two. The benefit of structuring your keys like this is that you will always have your trusted keychain, and in case something goes south, E.g. your key gets compromised, you can replace that subkey and keep your identity.
+In PGP, there is this concept of a **keyring**. A keyring has one master key and many subkeys. It is generally a good idea to have one fat master key that never expires and many small subkeys that last about a year or two. The benefit of structuring your keys like this is that you will always have your trusted keychain, and in case something goes south, E.g. your key gets compromised, you can replace that subkey and keep your identity.
 
 With that in mind, let's create our master key. Run `gpg --full-gen-key` and follow the instructions. You probably want to use the `RSA and RSA (default)` option, and a key that is 4096 bits long (remember, this is the fat master key that never expires, so it must be secure). The comment can be left blank, unless you know what you are doing with that field. Enter a strong passphrase! If your private key were to get compromised, this passphrase is your last line of defense. Make it long, hard to crack but still rememberable. If everything went well, your key should be generated. Here's the full example output:
 
 ```
-root@c6acc9eb4fd1:/# gpg --full-gen-key    
+root@c6acc9eb4fd1:/# gpg --full-gen-key
 gpg (GnuPG) 2.2.19; Copyright (C) 2019 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
@@ -49,17 +49,17 @@ Please specify how long the key should be valid.
       <n>w = key expires in n weeks
       <n>m = key expires in n months
       <n>y = key expires in n years
-Key is valid for? (0) 
+Key is valid for? (0)
 Key does not expire at all
 Is this correct? (y/N) y
 
 GnuPG needs to construct a user ID to identify your key.
 
-Real name: Foo 
+Real name: Foo
 Name must be at least 5 characters long
-Real name: Foo Bar 
-Email address: foo@bar.com 
-Comment: 
+Real name: Foo Bar
+Email address: foo@bar.com
+Comment:
 You selected this USER-ID:
     "Foo Bar <foo@bar.com>"
 
@@ -130,16 +130,16 @@ Now you should have one key per use case: signing, encrypting and authentication
 
 ```
 sec  rsa4096/C8E4854970B7A1A3
-     created: 2021-04-07  expires: never       usage: SC  
+     created: 2021-04-07  expires: never       usage: SC
      trust: ultimate      validity: ultimate
 ssb  rsa4096/C5F71423813B40A0
-     created: 2021-04-07  expires: never       usage: E   
+     created: 2021-04-07  expires: never       usage: E
 ssb  rsa2048/52D4D1D19533D8A5
-     created: 2021-04-07  expires: 2022-04-07  usage: S   
+     created: 2021-04-07  expires: 2022-04-07  usage: S
 ssb  rsa2048/072D841844E3F949
-     created: 2021-04-07  expires: 2022-04-07  usage: E   
+     created: 2021-04-07  expires: 2022-04-07  usage: E
 ssb  rsa2048/42E4F6E376DD92F6
-     created: 2021-04-07  expires: 2022-04-07  usage: A   
+     created: 2021-04-07  expires: 2022-04-07  usage: A
 [ultimate] (1). Foo Bar <foo@bar.com>
 ```
 
@@ -156,11 +156,13 @@ To sign your code, you will have to tell git which key to use. Edit your global 
 	gpgsign = true
 [user]
     name = Foo Bar
-	signingkey = 52D4D1D19533D8A5!      # Mind the trailing exclamation mark!
+	signingkey = 52D4D1D19533D8A5      # Use the ID of your signing key
 	email = foo@bar.com
 ```
 
-Now, whenever you sign a commit, git will sign it with your private key.
+Now, whenever you add a commit, git will sign it with your key. You will have to let your git hosting provider know that this key is yours. Go to your account settings and look for a tab that says "Manage (GPG) keys". Where this tab is depends on your choice of service. Next, run `gpg --export --armor <your master key id>` and copy the resulting key into the input field of your git hosting service.
+
+Whenever you push a commit, its signature will be checked against that of your account. And that's all the magic!
 
 ## Encrypting messages
 
