@@ -1,21 +1,17 @@
 ---
-title: Code signing should be the norm.
+title: Code signing should be the norm
 date: "2021-04-07"
 ---
 
-In the past week, I've been experimenting with PGP, or GPG in particular. In a nutshell, PGP is an encryption standard with a wide range of use cases.
+In the past week, I've been experimenting with PGP, or GPG in particular. In a nutshell, PGP is an encryption standard with a wide range of use cases. For quite some time, I didn't see the point of keeping a PGP keypair. It seemed like a burden to securely keep track of the key(s). Once you loose it, you will loose the trust of others. But after doing some research on the topic, I found that it's not actually that much of a hassle, while giving you many benefits.
 
 # The Why
 
-For quite some time, I didn't see the point of keeping a PGP keypair. It seemed like a burden to securely keep track of the key(s). Once you loose it, you will loose the trust of others. But after doing some research on the topic, I found that it's not actually that much of a hassle, while giving you many benefits.
-
 The most obvious benefit is encrypting and decrypting messages and files. If you upload your public key, I can encrypt our private conversations. Nobody will be able to read what we're chatting about. If you fear that cloud providers will read through your documents, you can also go ahead and encrypt all of your data with your keypair.
 
-But PGP is not just about encryption. A keypair also gives you a proof of identity. If I see that a piece of work is signed by you, I can be certain that you and only you have worked on this.
+But PGP is not just about encryption. A keypair also gives you a proof of identity. If I see that a piece of work is signed by you, I can be certain that you and only you have worked on this. By signing the keys of people we trust, we build a "chain of trust". A key with many signatures generally has a higher reputation than one without any signatures.
 
 Take Git commits for example. All it takes is a `git config user.email "elon@spacex.com"` and I can publish code under a different identity. But if everyone on the team signed their work, they will quickly see that a commit is missing its signature, because I'm simply not able to sign my work with Elon Musk's keypair. Only if they see a badge like this, they will know that they can trust it.
-
-![A signed commit](/assets/signed_commit.png)
 
 Your keypair can also come in handy as a SSH key. Before I knew about PGP, I always had to install one key per machine I was working on. With PGP, you only have a single identity, and therefore you only have to install one key on your servers.
 
@@ -143,7 +139,23 @@ ssb  rsa2048/42E4F6E376DD92F6
 [ultimate] (1). Foo Bar <foo@bar.com>
 ```
 
-Let's put them to use!
+Save your key, and optionally upload it to one of the many keyservers:
+
+```
+gpg> save
+
+$ gpg --keyserver keys.openpgp.org  --send-keys foo@bar.com
+```
+
+**Pro tip**: To set a default keyserver (I use `keys.opengpg.org`, but there are many others out there!), simply add it in your `~/.gnupg/gpg.conf` file:
+
+```
+keyserver keys.openpgp.org
+```
+
+People can now import your public key via `gpg --keyserver keys.opengpg.org --search-keys foo@bar.com`.
+
+We're done with the setup, let's put our keys to use!
 
 ## Code Signing
 
@@ -164,8 +176,72 @@ Now, whenever you add a commit, git will sign it with your key. You will have to
 
 Whenever you push a commit, its signature will be checked against that of your account. And that's all the magic!
 
+![A signed commit](/assets/signed_commit.png)
+
 ## Encrypting messages
 
+In order to send an encrypted message to someone, you will need his public key. There are numerous ways to obtain a public key of someone. The simplest way is to ask the person for the raw key. If it's in a text file, you can import it like so:
+
+```
+cat some_key.txt | gpg --import
+```
+
+Oftentimes, people will store their keys on a keyserver, just like you have probably done it. To import someones key, simply search for it on a keyserver. I'll use my key here as an example.
+
+```
+gpg --keyserver keys.openpgp.org  --search-keys garrit@slashdev.space
+```
+
+Now, your computer should know about my key. To verify that it's actually me you have imported, you can check if the output of `gpg --fingerprint garrit@slashdev.space` matches my actual fingerprint: `2218 337E 54AA 1DBE 207B  404D BB54 AF7E B093 9F3D`.
+
+Optionally, if you trust that the key is actually associated to me, you can sign it. This let's other people know that you trust me, which helps build a so called "chain of trust". A key which has been signed by many people is generally more trustworthy than one that has no signatures.
+
+```
+gpg --sign-key garrit@slashdev.space
+```
+
+Now, let's encrypt a message that only I will be able to read:
+
+```
+printf "If you can read this, you've successfully decrypted this message" | gpg --encrypt --sign --armor -r garrit@slashdev.space
+```
+
+Feel free to send this message to my email-address, I'm happy to chat with you!
+
+Decrypting something is as easy as encrypting something. Say the encrypted message lives in `message.txt.asc`. If you are the recipient, all you have to do is to run `gpg --decrypt message.txt.asc`.
+
 ## SSH
+
+Your PGP key can also be used as an SSH key to authenticate on your servers.
+
+First we need to add the following to `~/.gnupg/gpg-agent.conf` to enable SSH support in gpg-agent.
+
+```
+enable-ssh-support
+```
+
+Next, we'll need to tell gpg which key to use. We need to get the so called `keygrip` of your authentication key and add it to the `~/.gnupg/sshcontrol`. The keygrip can be obtained by running `gpg -K --with-keygrip`. Just copy the keygrip of the authentication key and paste it into the `~/.gnupg/sshcontrol` file.
+
+Then, we want the ssh agent to know where to look for the key. Put this in your `.bashrc` file (or corresponding config):
+
+```
+export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+```
+
+Then, run `ssh-add -l` to load the key directly. 
+
+To get the public ssh key of your keypair, run this command:
+
+```
+gpg --export-ssh-key foo@bar.com
+```
+
+and add the output to the `~/.ssh/authorized_keys` file on your server. When signing in, you should be prompted to enter the passphrase of your key and then authenticated.
+
+## Closing thoughts
+
+I hope by now you see the benefits you gain from having a PGP keypair. Whether you find it useful enough to set one up is of course up to you. It is however a good practice to at least sign your git commits as a proof of identity. There are services like [Keyoxide](https://keyoxide.org) that let you keep a "public record" of your key, so that other people can verify your identity more easily. If you set up your key, let me know by sending an encrypted message!
 
 This is post 016 of [#100DaysToOffload](https://100daystooffload.com/).
