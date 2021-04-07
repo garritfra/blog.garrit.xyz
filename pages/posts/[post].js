@@ -185,7 +185,7 @@ export async function getStaticProps({ ...ctx }) {
 
   return {
     props: {
-      siteTitle: "/dev.space",
+      siteTitle: "/home/garrit",
       frontmatter: data.data,
       markdownBody: data.content,
     },
