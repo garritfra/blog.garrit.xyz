@@ -1,4 +1,4 @@
-# slashdev.space
+# blog.garrit.xyz
 
 This is the repository for my personal blog.
 
