@@ -22,10 +22,15 @@
     font-style: italic;
 }
 
+html {
+	scrollbar-color: black white;
+}
+
 body {
     margin: 0;
     font-family: "Work Sans", sans-serif;
     font-weight: 250;
+    overflow-x: hidden;
     text-align: center;
 }
 

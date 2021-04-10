@@ -4,6 +4,10 @@
         color: #dbd7db;
     }
 
+    html {
+        scrollbar-color: #dbd7db #161618 !important;
+    }
+
     .button__link {
         background-color: #67676c;
     }
