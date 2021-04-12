@@ -4,7 +4,7 @@ import matter from "gray-matter";
 
 const Index = (props) => {
   return (
-    <Layout pathname="/" siteTitle="/home/garrit" siteDescription="">
+    <Layout pathname="/" siteTitle="~/garrit" siteDescription="">
       <section>
         <BlogList posts={props.posts} />
       </section>
@@ -40,7 +40,7 @@ export async function getStaticProps() {
   return {
     props: {
       posts,
-      title: "/home/garrit",
+      title: "~/garrit",
       description: "",
     },
   };
