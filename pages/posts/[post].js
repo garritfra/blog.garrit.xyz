@@ -92,9 +92,6 @@ export default function BlogTemplate(props) {
           .blog__body h1 h2 h3 h4 h5 h6 p {
             font-weight: normal;
           }
-          .blog__body p {
-            color: inherit;
-          }
           .blog__body ul {
             list-style: initial;
           }

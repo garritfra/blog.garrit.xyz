@@ -236,6 +236,29 @@ export default function Meta(props) {
           .blog__footer a {
             text-decoration: underline;
           }
+
+          @media (prefers-color-scheme: dark) {
+            :root {
+                background-color: #161618;
+                color: #dbd7db;
+            }
+
+            html {
+                scrollbar-color: #dbd7db #161618 !important;
+            }
+
+            h1, h2, h3, h4, p, pre, a, ul, li, blog__body > * {
+              color: #dbd7db;
+            }
+        
+            .button__link {
+                background-color: #67676c;
+            }
+        
+            a {
+               color: #dbd7db;
+            }
+          }
         `}
       </style>
     </>

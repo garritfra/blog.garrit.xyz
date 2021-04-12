@@ -38,7 +38,6 @@ export default function Header(props) {
           }
           nav {
             padding: 1.5rem 1.25rem;
-            border-bottom: 1px solid #ebebeb;
             display: flex;
             justify-content: space-between;
             flex-direction: row;
@@ -55,7 +54,6 @@ export default function Header(props) {
               padding: 2rem;
               width: 30vw;
               height: 100%;
-              border-right: 1px solid #ebebeb;
               border-bottom: none;
               flex-direction: column;
               align-items: flex-start;

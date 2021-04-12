@@ -82,7 +82,6 @@ const BlogList = ({ posts }) => {
             padding: 1.5rem 1.25rem;
             transform: translateX(0px);
             transition: transform 0.3s ease-in;
-            border-bottom: 1px solid #ebebeb;
           }
           .blog__info h2,
           .blog__info h3,
