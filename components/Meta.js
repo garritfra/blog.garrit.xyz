@@ -12,6 +12,9 @@ export default function Meta(props) {
           content="Random thoughts, tips and rants about software"
         ></meta>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+        <script async defer data-domain="blog.garrit.xyz" src="https://analytics.slashdev.space/js/plausible.js"></script>
+
       </Head>
       <style jsx global>
         {`
@@ -239,24 +242,33 @@ export default function Meta(props) {
 
           @media (prefers-color-scheme: dark) {
             :root {
-                background-color: #161618;
-                color: #dbd7db;
+              background-color: #161618;
+              color: #dbd7db;
             }
 
             html {
-                scrollbar-color: #dbd7db #161618 !important;
+              scrollbar-color: #dbd7db #161618 !important;
             }
 
-            h1, h2, h3, h4, p, pre, a, ul, li, blog__body > * {
+            h1,
+            h2,
+            h3,
+            h4,
+            p,
+            pre,
+            a,
+            ul,
+            li,
+            blog__body > * {
               color: #dbd7db;
             }
-        
+
             .button__link {
-                background-color: #67676c;
+              background-color: #67676c;
             }
-        
+
             a {
-               color: #dbd7db;
+              color: #dbd7db;
             }
           }
         `}
