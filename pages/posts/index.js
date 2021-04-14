@@ -1,5 +1,5 @@
-import Layout from "../components/Layout";
-import BlogList from "../components/BlogList";
+import Layout from "../../components/Layout";
+import BlogList from "../../components/BlogList";
 import matter from "gray-matter";
 
 const Index = (props) => {
@@ -35,7 +35,7 @@ export async function getStaticProps() {
       };
     });
     return data;
-  })(require.context("../content/posts", true, /\.md$/));
+  })(require.context("../../content/posts", true, /\.md$/));
 
   return {
     props: {
