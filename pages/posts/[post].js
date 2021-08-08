@@ -29,11 +29,11 @@ export default function BlogTemplate(props) {
           <p>
             If you enjoyed this post, consider{" "}
             <a href="https://donate.slashdev.space">buying me a coffee</a>! Got
-            comments? Drop a mail in my{" "}
-            <a href="https://lists.sr.ht/~garritfra/public-inbox">
-              public inbox
+            comments? Send me a{" "}
+            <a href="mailto:garrit@slashdev.space">
+              Mail
             </a>
-            , or send me a message on{" "}
+            , or shoot me a message on{" "}
             <a href="https://matrix.to/#/@garrit:matrix.slashdev.space">
               Matrix
             </a>

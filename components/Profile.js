@@ -5,19 +5,24 @@ export default function Profile(props) {
     <div className="profile">
       <h2>Garrit Franke</h2>
       <p>Random thoughts, tips and rants about software</p>
-      <Link href="https://lists.sr.ht/~garritfra/public-inbox">
-        Public Inbox
-      </Link>
-      <br />
-      <Link href="https://matrix.to/#/@garrit:matrix.slashdev.space">
-        Matrix
-      </Link>
       <br />
       <Link href="https://garrit.xyz">Website</Link>
       <br />
       <Link href="https://github.com/garritfra">Github</Link>
       <br />
       <Link href="https://www.linkedin.com/in/garritfranke/">LinkedIn</Link>
+      <br />
+      <Link href="mailto:garrit@slashdev.space">
+      Email
+      </Link>
+      <br />
+      <Link href="https://matrix.to/#/@garrit:matrix.slashdev.space">
+      Matrix
+      </Link>
+      <br />
+      <Link href="https://keyoxide.org/hkp/garrit@slashdev.space">
+      PGP
+      </Link>
       <br />
       <Link href="/rss.xml">RSS</Link>
       <style jsx>
