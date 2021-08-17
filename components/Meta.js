@@ -59,7 +59,7 @@ export default function Meta(props) {
                         padding-left: 0;
                         padding-right: 0;
                         padding-top: 0;
-                        list-style-position: outside;
+                        list-style-position: inside;
                         list-style-image: none;
                     }
                     ol {
@@ -68,7 +68,7 @@ export default function Meta(props) {
                         padding-left: 0;
                         padding-right: 0;
                         padding-top: 0;
-                        list-style-position: outside;
+                        list-style-position: inside;
                         list-style-image: none;
                     }
                     ul,
@@ -97,7 +97,6 @@ export default function Meta(props) {
                         margin-right: 0;
                         margin-top: 0;
                         margin-bottom: 1.45rem;
-                        font-size: 0.85rem;
                         line-height: 1.42;
                         background: hsla(0, 0%, 0%, 0.04);
                         border-radius: 3px;
@@ -106,7 +105,6 @@ export default function Meta(props) {
                         padding: 1.45rem;
                     }
                     table {
-                        font-size: 1rem;
                         line-height: 1.45rem;
                         border-collapse: collapse;
                         width: 100%;
@@ -192,27 +190,32 @@ export default function Meta(props) {
                         text-rendering: optimizeLegibility;
                     }
                     h1,
-                    h2 {
+                    h2,
+                    h3,
+                    h4 {
                         font-weight: 500;
                     }
                     h1 {
-                        font-size: 2rem;
+                        font-size: 3rem;
                         letter-spacing: -1px;
                         line-height: 1.1875;
                     }
                     h2 {
-                        font-size: 1.7rem;
+                        font-size: 2.5rem;
                         letter-spacing: -0.75px;
                         line-height: 1.2;
                     }
                     h3 {
-                        font-size: 1.2rem;
-                        letter-spacing: -0.5px;
+                        font-size: 1.7rem;
                         line-height: 1.1875;
                         color: #a0a0a0;
                         font-weight: normal;
                     }
-                    p {
+                    h4 {
+                        font-size: 1.3rem;
+                    }
+                    p,
+                    li {
                         font-size: 1.2rem;
                         letter-spacing: -0.5px;
                         line-height: 1.5;
@@ -220,17 +223,14 @@ export default function Meta(props) {
                     }
                     @media (min-width: 1280px) {
                         h1 {
-                            font-size: 2rem;
                             letter-spacing: -1px;
                             line-height: 1.1875;
                         }
                         h2 {
-                            font-size: 1.5rem;
                             letter-spacing: -0.75px;
                             line-height: 1.1667;
                         }
                         h3 {
-                            font-size: 1rem;
                             letter-spacing: -0.5px;
                             line-height: 1.1875;
                             color: #a0a0a0;

@@ -48,38 +48,38 @@ Development of an application to look up car dealership data
 
 # Projects
 
-## [Clio Programming Language - Core Contributer](https://clio-lang.org/)
+### [Clio Programming Language - Core Contributer](https://clio-lang.org/)
 
 Pure functional lazy-evaluated programming language targeting decentralized and
 distributed systems. It is made to take advantage of multiple CPUs and CPU
 cores (parallelism) by default, to run on clusters and on the cloud easily.
 
-## [Imf & Firus - Developer](https://imfundfirus.de/)
+### [Imf & Firus - Developer](https://imfundfirus.de/)
 
 Daily challenges for children of parents that are working from home during the
 pandemic. This tool gives children fun and interesting activities they can do
 on their own or with a sibling.
 
-## [Antimony Programming language - Maintainer](https://github.com/antimony-lang/antimony)
+### [Antimony Programming language - Maintainer](https://github.com/antimony-lang/antimony)
 
 A bullshit-free programming language that compiles to JavaScript and C.
 
-## [Taurus - Maintainer](https://github.com/garritfra/taurus)
+### [Taurus - Maintainer](https://github.com/garritfra/taurus)
 
 Concurrent Gemini server written in Rust. Very lightweight and hackable.
 
 # Activities
 
-## "WirVsVirus" hackathon participant, 2020
+### "WirVsVirus" hackathon participant, 2020
 
 Planning and developing a solution to entertain children at home during the pandemic.
 
-## Programming workshop director, 2018
+### Programming workshop director, 2018
 
 Designing and directing a programming workshop for students of grade 6-8.
 Scratch and Python were lectured over the course of two terms.
 
-## "Spacecamp" workshop organizer, 2018
+### "Spacecamp" workshop organizer, 2018
 
 Organizing and leading a workshop to familiarize children and teenager with
 technology and project management.
