@@ -1,4 +1,6 @@
-I'm **Garrit**, a generalist software developer.
+---
+title: "I'm Garrit, a generalist software developer."
+---
 
 my interests include...
 

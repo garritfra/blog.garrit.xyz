@@ -1,12 +1,10 @@
 import ReactMarkdown from "react-markdown";
-import Layout from "../components/Layout";
-import Home from "../components/Home";
 import matter from "gray-matter";
 import Page from "../components/Page";
 
 const Index = (props) => {
     return (
-        <Page>
+        <Page title={props.title}>
             <ReactMarkdown source={props.markdownBody} />
         </Page>
     );
@@ -18,7 +16,7 @@ export async function getStaticProps() {
 
     return {
         props: {
-            siteTitle: "~/garrit",
+            title: data.data.title,
             markdownBody: data.content,
         },
     };

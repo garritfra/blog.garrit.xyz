@@ -43,14 +43,8 @@ export default function Layout({
             color: #ebebeb;
           }
           .content {
-            flex-grow: 1;
           }
           @media (min-width: 768px) {
-            .layout {
-              display: block;
-            }
-            .content {
-            }
           }
         `}
       </style>
