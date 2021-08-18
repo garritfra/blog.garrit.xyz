@@ -23,6 +23,10 @@ export default function Header(props) {
                 <a href="/">
                     <h1>{props.siteTitle}</h1>
                 </a>
+                <ul className="header__links">
+                    <li><a href="/posts">Blog</a></li>
+                    <li><a href="/cv">Resume</a></li>
+                </ul>
             </nav>
             <style jsx>
                 {`
@@ -39,17 +43,26 @@ export default function Header(props) {
                         flex-direction: row;
                         align-items: center;
                     }
+
+                    .header__links {
+                        list-style-type: none;
+                        display: flex;
+                        flex-direction: row;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .header__links li {
+                        padding: 1rem;
+                    }
                     @media (min-width: 768px) {
                         .header {
                             left: 0;
                             top: 0;
                         }
                         .nav {
-                            padding: 2rem;
                             width: 100vw;
                             height: 100%;
                             border-bottom: none;
-                            flex-direction: column;
                             align-items: flex-start;
                         }
                     }

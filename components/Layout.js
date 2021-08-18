@@ -28,9 +28,8 @@ export default function Layout({
   return (
     <section className={`layout`}>
       <Meta siteTitle={siteTitle} siteDescription={siteDescription} />
-      <Header siteTitle="~/garrit" />
+      <Header siteTitle="~garrit" />
       <div className="content">{children}</div>
-      {windowWidth <= 768 && <Profile className="content"></Profile>}
       <style jsx>
         {`
           .layout {
