@@ -56,7 +56,7 @@ export default function Meta(props) {
                     ul {
                         margin: 0;
                         padding-bottom: 0;
-                        padding-left: 0;
+                        padding-left: 3rem;
                         padding-right: 0;
                         padding-top: 0;
                         list-style-position: inside;
@@ -65,7 +65,7 @@ export default function Meta(props) {
                     ol {
                         margin: 0;
                         padding-bottom: 0;
-                        padding-left: 0;
+                        padding-left: 3rem;
                         padding-right: 0;
                         padding-top: 0;
                         list-style-position: inside;

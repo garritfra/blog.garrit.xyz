@@ -50,9 +50,6 @@ export default function Layout({
               display: block;
             }
             .content {
-              flex-grow: none;
-              width: 70vw;
-              margin-left: 30vw;
             }
           }
         `}

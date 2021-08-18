@@ -23,7 +23,6 @@ export default function Header(props) {
                 <a href="/">
                     <h1>{props.siteTitle}</h1>
                 </a>
-                {windowWidth >= 768 && <Profile></Profile>}
             </nav>
             <style jsx>
                 {`
@@ -42,14 +41,12 @@ export default function Header(props) {
                     }
                     @media (min-width: 768px) {
                         .header {
-                            height: 100vh;
-                            position: fixed;
                             left: 0;
                             top: 0;
                         }
                         .nav {
                             padding: 2rem;
-                            width: 30vw;
+                            width: 100vw;
                             height: 100%;
                             border-bottom: none;
                             flex-direction: column;

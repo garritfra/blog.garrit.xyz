@@ -1,49 +1,27 @@
+import ReactMarkdown from "react-markdown";
 import Layout from "../components/Layout";
-import BlogList from "../components/BlogList";
+import Home from "../components/Home";
 import matter from "gray-matter";
+import Page from "../components/Page";
 
 const Index = (props) => {
-  return (
-    <Layout pathname="/" siteTitle="~/garrit" siteDescription="">
-      <section>
-        <BlogList posts={props.posts} />
-      </section>
-    </Layout>
-  );
+    return (
+        <Page>
+            <ReactMarkdown source={props.markdownBody} />
+        </Page>
+    );
 };
 
 export async function getStaticProps() {
-  //get posts & context from folder
-  const posts = ((context) => {
-    const keys = context.keys();
-    const values = keys.map(context);
+    const content = await import(`../content/index.md`);
+    const data = matter(content.default);
 
-    const data = keys.map((key, index) => {
-      // Create slug from filename
-      const slug = key
-        .replace(/^.*[\\\/]/, "")
-        .split(".")
-        .slice(0, -1)
-        .join(".");
-      const value = values[index];
-      // Parse yaml metadata & markdownbody in document
-      const document = matter(value.default);
-      return {
-        frontmatter: document.data,
-        markdownBody: document.content,
-        slug,
-      };
-    });
-    return data;
-  })(require.context("../content/posts", true, /\.md$/));
-
-  return {
-    props: {
-      posts,
-      title: "~/garrit",
-      description: "",
-    },
-  };
+    return {
+        props: {
+            siteTitle: "~/garrit",
+            markdownBody: data.content,
+        },
+    };
 }
 
 export default Index;
