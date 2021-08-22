@@ -38,7 +38,6 @@ export default function Meta(props) {
                         font-family: "Work Sans", "Helvetica Neue", Helvetica,
                             sans-serif;
                         overflow-x: hidden;
-                        color: #000;
                         font-size: 16px;
                         -webkit-font-smoothing: antialiased;
                         -moz-osx-font-smoothing: grayscale;
@@ -176,8 +175,6 @@ export default function Meta(props) {
                     h5,
                     h6,
                     p {
-                        font-family: "Work Sans", "Helvetica Neue", Helvetica,
-                            sans-serif;
                         margin-left: 0;
                         margin-right: 0;
                         margin-top: 0;
@@ -186,40 +183,7 @@ export default function Meta(props) {
                         padding-right: 0;
                         padding-top: 0;
                         margin-bottom: 1.45rem;
-                        color: inherit;
                         text-rendering: optimizeLegibility;
-                    }
-                    h1,
-                    h2,
-                    h3,
-                    h4 {
-                        font-weight: 500;
-                    }
-                    h1 {
-                        font-size: 3rem;
-                        letter-spacing: -1px;
-                        line-height: 1.1875;
-                    }
-                    h2 {
-                        font-size: 2.5rem;
-                        letter-spacing: -0.75px;
-                        line-height: 1.2;
-                    }
-                    h3 {
-                        font-size: 1.7rem;
-                        line-height: 1.1875;
-                        color: #a0a0a0;
-                        font-weight: normal;
-                    }
-                    h4 {
-                        font-size: 1.3rem;
-                    }
-                    p,
-                    li {
-                        font-size: 1.2rem;
-                        letter-spacing: -0.5px;
-                        line-height: 1.5;
-                        color: #464646;
                     }
                     @media (min-width: 1280px) {
                         h1 {
@@ -249,30 +213,8 @@ export default function Meta(props) {
                     }
 
                     @media (prefers-color-scheme: dark) {
-                        :root {
-                            background-color: #161618;
-                            color: #dbd7db;
-                        }
-
                         html {
                             scrollbar-color: #dbd7db #161618 !important;
-                        }
-
-                        h1,
-                        h2,
-                        h3,
-                        h4,
-                        p,
-                        pre,
-                        a,
-                        ul,
-                        li,
-                        blog__body > * {
-                            color: #dbd7db;
-                        }
-
-                        .button__link {
-                            background-color: #67676c;
                         }
 
                         a {

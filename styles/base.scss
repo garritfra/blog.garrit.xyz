@@ -1,0 +1,6 @@
+:root {
+    background: $color-secondary-dark;
+    @media (prefers-color-scheme: light) {
+        background: $color-secondary-light;
+    }
+}
