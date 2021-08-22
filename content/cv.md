@@ -1,5 +1,5 @@
 ---
-title: "Garrit Franke"
+title: "Curriculum Vitae"
 ---
 
 # Education
