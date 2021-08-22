@@ -23,6 +23,7 @@ export default function BlogTemplate(props) {
                 source={props.markdownBody}
                 date={props.frontmatter.date}
             />
+            <hr />
             <p>
                 If you enjoyed this post, consider{" "}
                 <a href="https://donate.slashdev.space">buying me a coffee</a>!
@@ -35,7 +36,7 @@ export default function BlogTemplate(props) {
                 .
             </p>
             <div className="blog__footer">
-                <h2>Written By: Garrit Franke</h2>
+                <h3>Written By: Garrit Franke</h3>
             </div>
         </Page>
     );
