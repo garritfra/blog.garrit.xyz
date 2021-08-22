@@ -4,7 +4,7 @@ import Page from "../components/Page";
 
 const Index = (props) => {
     return (
-        <Page title={props.title}>
+        <Page>
             <ReactMarkdown source={props.markdownBody} />
         </Page>
     );
@@ -16,7 +16,6 @@ export async function getStaticProps() {
 
     return {
         props: {
-            title: data.data.title,
             markdownBody: data.content,
         },
     };

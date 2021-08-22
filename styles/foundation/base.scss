@@ -1,7 +1,9 @@
 :root {
     background: $color-secondary-dark;
+    color: $color-text-dark;
     @media (prefers-color-scheme: light) {
         background: $color-secondary-light;
+        color: $color-text-light;
     }
 }
 
@@ -135,26 +137,6 @@ li *:last-child {
 }
 li > p {
     margin-bottom: calc(1.45rem / 2);
-}
-
-@media (min-width: 1280px) {
-    h1 {
-        letter-spacing: -1px;
-        line-height: 1.1875;
-    }
-    h2 {
-        letter-spacing: -0.75px;
-        line-height: 1.1667;
-    }
-    h3 {
-        letter-spacing: -0.5px;
-        line-height: 1.1875;
-        color: #a0a0a0;
-        font-weight: normal;
-    }
-    p {
-        line-height: 1.4375;
-    }
 }
 
 @media (prefers-color-scheme: dark) {

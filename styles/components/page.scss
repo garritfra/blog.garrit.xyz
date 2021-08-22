@@ -5,6 +5,7 @@
         min(650px, 85vw)
         1fr;
     margin-top: 1rem;
+    min-height: 80vh;
 }
 .page > * {
     grid-column: 2;
@@ -27,7 +28,6 @@
     object-position: center;
 }
 .page__info {
-    padding: 1.5rem 1.25rem;
     width: 100%;
     max-width: 768px;
     margin: 0 auto;

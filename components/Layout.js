@@ -1,8 +1,7 @@
 import { useState, useLayoutEffect } from "react";
-
 import Header from "./Header";
+import Footer from "./Footer";
 import Meta from "./Meta";
-import Profile from "./Profile";
 
 function useWindowSize() {
   const [size, setSize] = useState([0, 0]);
@@ -30,6 +29,7 @@ export default function Layout({
       <Meta siteTitle={siteTitle} siteDescription={siteDescription} />
       <Header siteTitle="~garrit" />
       <div className="content">{children}</div>
+      <Footer />
       <style jsx>
         {`
           .layout {

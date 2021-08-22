@@ -1,8 +1,6 @@
----
-title: "I'm Garrit, a generalist software developer."
----
+# I'm Garrit, a generalist software developer.
 
-my interests include...
+My interests include...
 
 * Fullstack Development
 * System Administration
