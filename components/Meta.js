@@ -91,18 +91,6 @@ export default function Meta(props) {
                         padding-top: 0;
                         margin-bottom: 1.45rem;
                     }
-                    pre {
-                        margin-left: 0;
-                        margin-right: 0;
-                        margin-top: 0;
-                        margin-bottom: 1.45rem;
-                        line-height: 1.42;
-                        background: hsla(0, 0%, 0%, 0.04);
-                        border-radius: 3px;
-                        overflow: auto;
-                        word-wrap: normal;
-                        padding: 1.45rem;
-                    }
                     table {
                         line-height: 1.45rem;
                         border-collapse: collapse;
@@ -152,38 +140,9 @@ export default function Meta(props) {
                     li > p {
                         margin-bottom: calc(1.45rem / 2);
                     }
-                    code {
-                        line-height: 1.45rem;
-                    }
-                    p code {
-                        background: hsla(0, 0%, 0%, 0.1);
-                        padding: 0 0.4rem;
-                    }
-                    @media (prefers-reduced-motion) {
-                        * {
-                            transition: none !important;
-                        }
-                    }
 
-                     {
+                    {
                         /* //TYPOGRAPHY------------------------------------- */
-                    }
-                    h1,
-                    h2,
-                    h3,
-                    h4,
-                    h5,
-                    h6,
-                    p {
-                        margin-left: 0;
-                        margin-right: 0;
-                        margin-top: 0;
-                        padding-bottom: 0;
-                        padding-left: 0;
-                        padding-right: 0;
-                        padding-top: 0;
-                        margin-bottom: 1.45rem;
-                        text-rendering: optimizeLegibility;
                     }
                     @media (min-width: 1280px) {
                         h1 {
