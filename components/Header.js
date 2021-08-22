@@ -1,5 +1,4 @@
 import { useLayoutEffect, useState } from "react";
-import Profile from "./Profile";
 
 function useWindowSize() {
     const [size, setSize] = useState([0, 0]);
@@ -28,46 +27,6 @@ export default function Header(props) {
                     <li><a href="/cv">Resume</a></li>
                 </ul>
             </nav>
-            <style jsx>
-                {`
-                    h1 {
-                        margin-bottom: 0;
-                    }
-                    h1:hover {
-                        cursor: pointer;
-                    }
-                    nav {
-                        padding: 1.5rem 1.25rem;
-                        display: flex;
-                        justify-content: space-between;
-                        flex-direction: row;
-                        align-items: center;
-                    }
-
-                    .header__links {
-                        list-style-type: none;
-                        display: flex;
-                        flex-direction: row;
-                        margin: 0;
-                        padding: 0;
-                    }
-                    .header__links li {
-                        padding: 1rem;
-                    }
-                    @media (min-width: 768px) {
-                        .header {
-                            left: 0;
-                            top: 0;
-                        }
-                        .nav {
-                            width: 100vw;
-                            height: 100%;
-                            border-bottom: none;
-                            align-items: flex-start;
-                        }
-                    }
-                `}
-            </style>
         </header>
     );
 }

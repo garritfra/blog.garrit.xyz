@@ -176,10 +176,6 @@ export default function Meta(props) {
                             scrollbar-color: #dbd7db #161618 !important;
                         }
 
-                        a {
-                            color: #dbd7db;
-                        }
-
 
                     article a[href^="http"]::after,
                     article a[href^="https://"]::after {
