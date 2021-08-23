@@ -2,6 +2,7 @@
     font-family: "Open Sans Regular", Arial, Helvetica, sans-serif;
     color: $color-primary-dark;
     font-weight: 400;
+    line-height: initial;
     text-rendering: optimizeLegibility;
     @media (prefers-color-scheme: light) {
         color: $color-primary-light;

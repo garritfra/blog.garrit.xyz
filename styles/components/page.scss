@@ -28,6 +28,19 @@
     width: 100%;
     max-width: 768px;
     margin: 0 auto;
+
+    h1 {
+        max-width: 500px;
+        margin: 0 auto 0.66rem auto;
+    }
+
+    &__date {
+        color: $color-text-dark;
+
+        @media (prefers-color-scheme: light) {
+            color: $color-text-light;
+        }
+    }
 }
 .page__info h1 {
     margin-bottom: 0.66rem;
@@ -53,9 +66,6 @@
 }
 .page__body h1 h2 h3 h4 h5 h6 p {
     font-weight: normal;
-}
-.page__body ul {
-    list-style-type: circle;
 }
 .page__body ul ol {
     margin-left: 1.25rem;
@@ -103,10 +113,6 @@
     .page__info {
         text-align: center;
         padding: 2rem 0;
-    }
-    .page__info h1 {
-        max-width: 500px;
-        margin: 0 auto 0.66rem auto;
     }
     .page__footer {
         padding: 2.25rem;

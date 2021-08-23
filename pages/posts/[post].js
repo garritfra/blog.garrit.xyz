@@ -18,7 +18,7 @@ export default function BlogTemplate(props) {
     if (!props.frontmatter) return <></>;
 
     return (
-        <Page title={props.frontmatter.title}>
+        <Page title={props.frontmatter.title} date={reformatDate(props.frontmatter.date)}>
             <ReactMarkdown
                 source={props.markdownBody}
                 date={props.frontmatter.date}
