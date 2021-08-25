@@ -1,5 +1,4 @@
 nav {
-    padding: 1.5rem 1.25rem;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -7,6 +6,14 @@ nav {
     a h1 {
         margin: 0;
         color: $color-text-dark;
+        text-align: center;
+        padding: 24px;
+        font-weight: 400;
+        font-size: 40px;
+
+        @media (prefers-color-scheme: light) {
+            color: $color-primary-light;
+        }
     }
 }
 
@@ -16,9 +23,11 @@ nav {
     flex-direction: row;
     margin: 0;
     padding: 0;
+    text-align: center;
+    align-items: center;
 }
 .header__links li {
-    padding: 1rem 1.5rem;
+    padding: 24px;
 }
 @media (min-width: 768px) {
     .header {
@@ -27,7 +36,6 @@ nav {
     }
     .nav {
         height: 100%;
-        border-bottom: none;
         align-items: flex-start;
     }
 }

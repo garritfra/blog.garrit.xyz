@@ -2,25 +2,25 @@
 title: "Curriculum Vitae"
 ---
 
-# Education
+## Education
 
 Advanced technical certificate (Degree); 2015 - 2017
 
 Mobile Software Developer (Traineeship); 2017 - 2020
 
-# Experience
+## Experience
 
-## appmotion GmbH
+### appmotion GmbH
 
-### Software Developer, March 2021 - present
+_**Software Developer, March 2021 - present**_
 
 Development of a web-based convention application
 
 * Development of APIs using Node.js and GraphQL
 
-## CGI Germany
+### CGI Germany
 
-### Mobile Software Developer, 2020 - Feburary 2021
+_**Mobile Software Developer, 2020 - Feburary 2021**_
 
 Development of a companion app for a leading automotive company
 
@@ -35,18 +35,18 @@ Development of a mobile smart-home application
 * Managing IoT devices using AWS IoT Core
 * Maintaining a RESTful API using AWS Lambda
 
-### Trainee, 2017 - 2020
+_**Trainee, 2017 - 2020**_
 
 Various Projects related to mobile app development in fields including fleet
 management and game development
 
-## Volkswagen Financial Services
+### Volkswagen Financial Services
 
-### SAP Development Intern, 2015 - 2016
+_**SAP Development Intern, 2015 - 2016**_
 
 Development of an application to look up car dealership data
 
-# Projects
+## Projects
 
 ### [Clio Programming Language - Core Contributer](https://clio-lang.org/)
 
@@ -68,7 +68,7 @@ A bullshit-free programming language that compiles to JavaScript and C.
 
 Concurrent Gemini server written in Rust. Very lightweight and hackable.
 
-# Activities
+## Activities
 
 ### "WirVsVirus" hackathon participant, 2020
 
